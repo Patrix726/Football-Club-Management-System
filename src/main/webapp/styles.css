@@ -202,7 +202,8 @@ nav {
     text-align: left;
 }
 .player-card-header .card-body span {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    font-family: Quicksand, Helvetica;
     font-weight: bold;
 }
 
@@ -254,20 +255,61 @@ nav {
     align-items: center;
 }
 .stats {
-  color: black;
-  font-weight: 700;
-  width: 90%;
   position: relative;
+  left: 40px;
+  right: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+  padding: 15px;
   border: 1px solid grey;
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.492);
+  color: black;
   text-indent: 10px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  left: 40px;
-  right: 10px;
-  border-radius: 10px;
 }
 .stats p {
     color: black;
+    opacity: 1;
+    margin: 0;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    width: 40%;
+}
+.stats-info {
+  font-family: Quicksand;
+  color: #ac3931ff;
+  margin-left: auto;
+}
+.stats a {
+  font-family: Quicksand;
+  color: #335968ff;
+
+}
+.buttons {
+  position: relative;
+  left: 40px;
+  right: 10px;
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+  padding: 20px;
+  width: 90%;
+  font-family: Quicksand;
+  font-size: 1.4rem;
+}
+.buttons a {
+  font-family: Quicksand;
+}
+#register {
+  width: 77%;
+  margin-top: 10px;
+  /* align-self: flex-start; */
 }
 #welcome {
   font-size: 120px;

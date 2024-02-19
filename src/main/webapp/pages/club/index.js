@@ -4,9 +4,15 @@ function createOptions(data) {
     children.map((elem) => {
         if (elem.id === "founded") {
             const foundedDate = new Date(data.founded)
-            elem.innerText += foundedDate.getFullYear();
+            const infoSpan = document.createElement("span")
+            infoSpan.classList.add("stats-info");
+            infoSpan.innerText = foundedDate.getFullYear();
+            elem.appendChild(infoSpan)
         } else {
-            elem.innerText += data[elem.id];
+            const infoSpan = document.createElement("span")
+            infoSpan.classList.add("stats-info");
+            infoSpan.innerText = data[elem.id];
+            elem.appendChild(infoSpan)
         }
     })
 }

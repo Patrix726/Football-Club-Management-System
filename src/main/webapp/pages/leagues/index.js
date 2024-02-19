@@ -24,7 +24,8 @@ async function addPlayerCards(leagueId) {
         const rankSpan = document.createElement("span")
         rankSpan.innerText = i + 1;
         rankSpan.id = "rank"
-        const nameSpan = document.createElement("span");
+        const nameSpan = document.createElement("a");
+        nameSpan.setAttribute("href","/pages/club?clubId="+club.id)
         nameSpan.innerText = club.name;
         
         const clubStats = document.createElement("div");

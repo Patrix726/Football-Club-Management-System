@@ -8,7 +8,10 @@ function createOptions(data) {
             link.innerText = data.currentClub
             elem.appendChild(link)
         } else {
-            elem.innerText += data[elem.id];
+            const infoSpan = document.createElement("span")
+            infoSpan.classList.add("stats-info");
+            infoSpan.innerText = data[elem.id];
+            elem.appendChild(infoSpan)
         }
     })
 }

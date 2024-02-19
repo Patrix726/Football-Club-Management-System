@@ -29,5 +29,9 @@ call()
 
 const deletebtn = document.querySelector("#delete")
 deletebtn.addEventListener("click", () => {
-    fetch("/api/player?action=1&playerId="+playerId, {method: 'POST'})
+    const playerIdInput = document.querySelector("#playerId")
+    playerIdInput.value = playerId;
+    
+    const form = document.querySelector("#deleteForm")
+    form.submit();
 })

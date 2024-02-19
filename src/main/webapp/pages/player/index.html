@@ -36,7 +36,10 @@
         <p id="jerseyNo">Jersey Number: </p>
     </div>
     <a class="btn btn-primary" href="/pages/player/transfer" id="transfer">Transfer</a>
-    <button class="btn btn-danger" id="delete" type="button">Delete Player</button>
+    <form action="/api/player?action=1" method="post" id="deleteForm">
+        <input type="number" name="playerId" id="playerId" hidden>
+        <button class="btn btn-danger" id="delete" type="button">Delete Player</button>
+    </form>
     
     
     <script src="/js/jquery-3.6.0.js"></script>

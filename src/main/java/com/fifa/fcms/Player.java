@@ -91,8 +91,6 @@ public class Player extends HttpServlet {
 
         if (success) {
             String redirectUrl = "/pages/players";
-            response.setHeader("Location", redirectUrl);
-            response.setStatus(HttpServletResponse.SC_MOVED_TEMPORARILY);
             response.sendRedirect(redirectUrl);
         } else {
             String redirectUrl = "/pages/player?playerId=" + playerId;

@@ -65,6 +65,7 @@ function createCard(leagueId, leagueName) {
     header.id = "heading" + leagueId;
 
     const headerText = document.createElement("h5")
+    headerText.id = "headerText"
     headerText.classList.add("mb-0")
 
 

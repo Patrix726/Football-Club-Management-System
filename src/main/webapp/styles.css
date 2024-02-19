@@ -189,6 +189,11 @@ nav {
 .submit-btn {
     width: 100px;
 } */
+.card-header .btn-link{
+  font-family: 'Francois One';
+  font-size: 1.2rem;
+
+}
 .player-card .card-body {
     display: flex;
     justify-content: space-around;
@@ -201,11 +206,21 @@ nav {
     width: 25%;
     text-align: left;
 }
+.card-body span.first-header {
+  text-align: left;
+  
+}
+
 .player-card-header .card-body span {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: Quicksand, Helvetica;
     font-weight: bold;
 }
+.card-body span, .card-body a{
+  font-family: Quicksand;
+  font-size: 0.9rem;
+}
+
 
 .club-card .card-body {
     display: flex;
@@ -213,12 +228,12 @@ nav {
 }
 .club-card .card-body span {
     width: 30%;
-    font-size: 1.1rem;
+    font-size: 1rem;
     /* text-align: left; */
 }
 .club-card .card-body a {
     width: 30%;
-    font-size: 1.1rem;
+    font-size: 1rem;
     
 }
 .club-card #rank {
@@ -234,7 +249,7 @@ nav {
     text-align: center;
 }
 .club-card-header .card-body span {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: Quicksand, Helvetica;
     font-weight: bold;
 }
@@ -363,10 +378,12 @@ nav {
 
 #members {
   position: absolute;
-  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.492);
+  border: 1px solid #94d1beff;
+  text-align: left;
   margin-left: 30px;
-  color: white;
-  bottom: 0px;
+  bottom: 10px;
   animation-name: updown;
   animation-duration: 3s;
   animation-timing-function: ease-in;
@@ -374,6 +391,24 @@ nav {
 -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 10px;
+}
+#member-names {
+  display: grid;
+  grid-template-columns: 1fr 125px;
+  width: 350px;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+#member-names span {
+  font-size: 12px;
+  font-family: Quicksand;
+}
+
+#member-title{
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 1.2rem;
 }
 h2 {
   font-size: 60px;

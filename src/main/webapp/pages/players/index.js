@@ -77,8 +77,11 @@ function createCard(clubId, clubName) {
     innerBody.classList.add("card-body")
     
     const tableHeads = ["Player Name", "Nationality", "Goals", "Assists"];
-    tableHeads.map((title) => {
+    tableHeads.map((title,ind) => {
         const el = document.createElement("span");
+        if (ind == 0) {
+            el.classList.add("first-header")
+        }
         el.innerText = title;
         innerBody.appendChild(el)
     })

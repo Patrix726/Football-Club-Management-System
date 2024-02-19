@@ -19,10 +19,10 @@ body {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 h1 {
-    color: #e5f3fc;
-    text-align: center;
-    padding: 30px;
+  color: white;
+  text-align: center;
 }
+
 nav {
     display: flex;
     backdrop-filter: blur(10px);
@@ -242,21 +242,80 @@ nav {
   right: 10px;
   border-radius: 10px;
 }
+
 #welcome {
   font-size: 120px;
   font-weight: 900;
+  animation-name: updown;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rightleft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes downup {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#introText {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 13px;
+  color: #1d1a30;
+  backdrop-filter: blur(1px);
 }
 
 #members {
   position: absolute;
+  text-align: center;
   margin-left: 30px;
   color: white;
-  bottom: 70px;
+  bottom: 0px;
+  animation-name: updown;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  border: 1px solid none;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
 }
-
 h2 {
   font-size: 60px;
+  animation-name: rightleft;
+  animation-duration: 1s;
   font-weight: 900;
   text-align: center;
+  color: #201658;
 }
 
+#members span {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1d1a30;
+}

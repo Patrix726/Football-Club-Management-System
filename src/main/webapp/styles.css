@@ -1,0 +1,212 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 27, 2024, 4:35:37 PM
+    Author     : PATRIX
+*/
+* {
+    margin: 0;
+    font-family: "Roboto";
+}
+
+body {
+    background-image: url("/public/22432.jpg");
+    background-size: 1300px 700px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+nav {
+    display: flex;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: rgba(255, 255, 255, 0.2);
+    margin: 0px;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navlist {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    list-style-type: none;
+}
+
+.navlink {
+    font-weight: 800;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background-color: none;
+    height: 20px;
+}
+
+.login-form-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 30vw;
+    height: 30vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto auto;
+    border: 2px solid rgba(255, 255, 255, 0.178);
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.login-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.submit-btn {
+    width: 100px;
+    color: white;
+    background-color: #2977f4;
+    border-radius: 50px;
+    position: relative;
+    bottom: 0;
+    height: 30px;
+}
+
+form label {
+    align-self: last baseline;
+    display: flex;
+    font-size: 14px;
+    margin: 5px;
+    font-weight: 600;
+}
+
+form input {
+    border-radius: 10px;
+    margin: 5px;
+    border-top: none;
+    border-left: none;
+    width: 20vw;
+    height: 20px;
+}
+/* body {
+    background-color: #ababac;
+    box-sizing: border-box;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.navlist {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 0;
+    gap: 10px;
+    list-style-type: none;
+}
+.navlink {
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 10px;
+    color:black ;
+    /* height: 20px; */
+/* } */
+ */
+.heading {
+    text-align: center;
+}
+/* .login-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 20vw;
+    height: 20vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto auto;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    justify-content: center;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.login-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.submit-btn {
+    width: 100px;
+} */
+.player-card .card-body {
+    display: flex;
+    justify-content: space-around;
+}
+.player-card .card-body span{
+    width: 25%;
+    text-align: center;
+}
+.player-card .card-body a {
+    width: 25%;
+    text-align: left;
+}
+.player-card-header .card-body span {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.club-card .card-body {
+    display: flex;
+    justify-content: space-around;
+}
+.club-card .card-body span {
+    width: 30%;
+    /* text-align: left; */
+}
+.club-card .card-body a {
+    width: 30%;
+}
+.club-card #rank {
+    width: 10%;
+}
+.club-stats {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    
+}
+.club-stats span {
+    text-align: center;
+}
+.club-card-header .card-body span {
+    font-size: 1.1rem;
+    font-weight: bold;
+}

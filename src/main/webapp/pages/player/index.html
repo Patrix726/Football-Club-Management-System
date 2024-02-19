@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Players</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    
+</head>
+<body>
+    <nav>
+        <a href="/" class="navlink">Home</a>
+        <ul class="navlist">
+            <li>
+                <a href="/pages/staff" class="navlink">Staff</a>
+            </li>
+            <li>
+                <a href="/pages/players" class="navlink">Players</a>
+            </li>
+            <li>
+                <a href="/pages/login" class="navlink">Login</a>
+            </li>
+        </ul>
+    </nav>
+    <h1>Player Stats</h1>
+    
+    <div class="stats">
+        <p id="fullName">Player Name: </p>
+        <p id="position">Playing Position: </p>
+        <p id="nationality">Nationality: </p>
+        <p id="currentClub">Current Club: </p>
+        <p id="goals">Goals Scored: </p>
+        <p id="assists">Assists Given: </p>
+        <p id="jerseyNo">Jersey Number: </p>
+    </div>
+    <a class="btn btn-primary" href="/pages/player/transfer" id="transfer">Transfer</a>
+    <button class="btn btn-danger" id="delete" type="button">Delete Player</button>
+    
+    
+    <script src="/js/jquery-3.6.0.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="./index.js"></script>
+    
+</body>
+
+</html>

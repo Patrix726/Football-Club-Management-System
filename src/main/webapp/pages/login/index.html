@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/" class="navlink">Home</a>
+        <ul class="navlist">
+            <li>
+                <a href="/pages/staff" class="navlink">Staff</a>
+            </li>
+            <li>
+                <a href="/pages/players" class="navlink">Players</a>
+            </li>
+            <li>
+                <a href="/pages/login" class="navlink">Login</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="login-form-container">
+        <h1>Login</h1>
+        <form action="/api/auth">
+            <label>
+                    <span>Username: </span>
+                    <input type=" text" name="username"
+                        placeholder="  e.g abebe143">
+                </label>
+            <label>
+                    <span>Password: </span>
+                    <input type="password" name="password"
+                        placeholder="  *******">
+                </label>
+            <input type="submit" value="Submit" class="submit-btn">
+        </form>
+    </div>
+
+    <script src="./index.js?version=51"></script>
+</body>
+
+</html>

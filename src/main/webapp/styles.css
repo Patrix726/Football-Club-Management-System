@@ -213,3 +213,21 @@ nav {
 .club h1 {
   color: #40a2e3;
 }
+#welcome {
+  font-size: 120px;
+  font-weight: 900;
+}
+
+#members {
+  position: absolute;
+  margin-left: 30px;
+  color: white;
+  bottom: 70px;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+}
+

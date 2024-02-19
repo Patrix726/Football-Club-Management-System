@@ -20,36 +20,54 @@ body {
 }
 h1 {
   color: white;
+  padding: 30px;
+  margin-top: 10px;
+  font-family: Quicksand, Helvetica;
+  font-size: 3rem;
   text-align: center;
 }
 
 nav {
     display: flex;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.1);
     border-bottom: rgba(255, 255, 255, 0.2);
     margin: 0px;
     padding: 5px;
     align-items: center;
+    height: 70px;
     justify-content: space-between;
 }
 
 .navlist {
     display: flex;
     justify-content: end;
+    align-items: center;
+    height: 70px;
+    margin: 0;
+    padding: 0;
     gap: 10px;
     list-style-type: none;
 }
 
 .navlink {
+    display: flex;  
+    align-items: center;
     font-weight: 800;
+    font-family: Quicksand,Helvetica;
     text-decoration: none;
     text-align: center;
     padding: 10px 20px;
     border-radius: 10px;
     color: rgb(255, 255, 255);
-    background-color: none;
-    height: 20px;
+    background-color: transparent;
+    height: 40px;
+}
+.navlink:hover {
+  border: 1px solid #94d1beff;
+  text-decoration: none;
+  color: white;
 }
 
 .login-form-container {
@@ -71,6 +89,7 @@ nav {
     border-radius: 1rem;
     padding: 2.5rem;
     text-align: center;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
@@ -193,10 +212,13 @@ nav {
 }
 .club-card .card-body span {
     width: 30%;
+    font-size: 1.1rem;
     /* text-align: left; */
 }
 .club-card .card-body a {
     width: 30%;
+    font-size: 1.1rem;
+    
 }
 .club-card #rank {
     width: 10%;
@@ -211,7 +233,8 @@ nav {
     text-align: center;
 }
 .club-card-header .card-body span {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    font-family: Quicksand, Helvetica;
     font-weight: bold;
 }
 #accordion {
@@ -237,12 +260,15 @@ nav {
   position: relative;
   border: 1px solid grey;
   text-indent: 10px;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   left: 40px;
   right: 10px;
   border-radius: 10px;
 }
-
+.stats p {
+    color: black;
+}
 #welcome {
   font-size: 120px;
   font-weight: 900;
@@ -289,6 +315,7 @@ nav {
   text-align: center;
   font-size: 13px;
   color: #1d1a30;
+-webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(1px);
 }
 
@@ -302,6 +329,7 @@ nav {
   animation-duration: 3s;
   animation-timing-function: ease-in;
   border: 1px solid none;
+-webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 10px;
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Players</title>
+    <title>Register Player</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles.css">
     
@@ -27,55 +27,58 @@
             </li>
         </ul>
     </nav>
-    <h1>Transfer Player</h1>
-    <form action="/api/players" method="post">
-        <label for="fname">
-            <span>First name</span>
-            <input type="text" name="fname" id="fname">
-        </label>
-        <label for="lname">
-            <span>Last name</span>
-            <input type="text" name="lname" id="lname">
-        </label>
-        <label for="birthdateIn">
-            <span>Date of Birth</span>
-            <input type="date" name="birthdateIn" id="birthdateIn">
-        </label>
-        <label for="nationality">
-            <span>Nationality</span>
-            <input type="text" name="nationality" id="nationality">
-        </label>
-        <label for="position">
-            <span>Position</span>
-            <select name="position">
-                <option>Defence</option>
-                <option>Midfield</option>
-                <option>Forward</option>
-            </select>
-        </label>
-        <label for="salary">
-            <span>Salary</span>
-            <input type="number" name="salary" id="salary">
-        </label>
-        <label for="clubId">
-            <span>Club name</span>
-            <select name="clubId" id="club-dropdown">
-                <option disabled>Pick a club</option>
-            </select>
-        </label>
-        <label for="jerseyNo">
-            <span>Jersey Number</span>
-            <input type="number" name="jerseyNo" id="jerseyNo" aria-valuemax="100" aria-valuemin="1">
-        </label>
-        <label for="contractIn">
-            <span>Contract End Date</span>
-            <input type="date" name="contractIn" id="contractIn">
-        </label>
-        <input type="number" name="contractEndDate" id="contractEndDate" hidden>
-        <input type="number" name="dateOfBirth" id="dateOfBirth" hidden>
+    <div class="register-form-container form-container">
+        <h1>Register Player</h1>
+        <form action="/api/players" method="post">
+            <label for="fname">
+                <span>First name</span>
+                <input type="text" name="fname" id="fname">
+            </label>
+            <label for="lname">
+                <span>Last name</span>
+                <input type="text" name="lname" id="lname">
+            </label>
+            <label for="birthdateIn">
+                <span>Date of Birth</span>
+                <input type="date" name="birthdateIn" id="birthdateIn">
+            </label>
+            <label for="nationality">
+                <span>Nationality</span>
+                <input type="text" name="nationality" id="nationality">
+            </label>
+            <label for="position">
+                <span>Position</span>
+                <select name="position">
+                    <option>Defence</option>
+                    <option>Midfield</option>
+                    <option>Forward</option>
+                </select>
+            </label>
+            <label for="salary">
+                <span>Salary</span>
+                <input type="number" name="salary" id="salary">
+            </label>
+            <label for="clubId">
+                <span>Club name</span>
+                <select name="clubId" id="club-dropdown">
+                    <option disabled>Pick a club</option>
+                </select>
+            </label>
+            <label for="jerseyNo">
+                <span>Jersey Number</span>
+                <input type="number" name="jerseyNo" id="jerseyNo" aria-valuemax="100" aria-valuemin="1">
+            </label>
+            <label for="contractIn">
+                <span>Contract End Date</span>
+                <input type="date" name="contractIn" id="contractIn">
+            </label>
+            <input type="number" name="contractEndDate" id="contractEndDate" hidden>
+            <input type="number" name="dateOfBirth" id="dateOfBirth" hidden>
 
-        <button class="btn btn-primary" type="button" id="submit-btn">Register Player</button>
-    </form>
+            <button class="btn btn-primary" type="button" id="submit-btn">Register Player</button>
+        </form>
+    </div>
+    
         <script src="/js/jquery-3.6.0.js"></script>
         <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="./index.js"></script>

@@ -18,6 +18,27 @@ function createOptions(data) {
 }
 function insertPlayers(data) {
     const parent = document.querySelector(".players");
+
+    const headerCard = document.createElement("div")
+    headerCard.classList.add("card")
+    headerCard.classList.add("player-card")
+    headerCard.classList.add("player-card-header")
+    const headerBody = document.createElement("div")
+    headerBody.classList.add("card-body")
+    
+    const tableHeads = ["Player Name", "Nationality", "Goals", "Assists"];
+    tableHeads.map((title,ind) => {
+        const el = document.createElement("span");
+        if (ind == 0) {
+            el.classList.add("first-header")
+        }
+        el.innerText = title;
+        headerBody.appendChild(el)
+    })
+    
+    headerCard.appendChild(headerBody);
+    parent.appendChild(headerCard);
+    
     data.map((player) => {
         const playerCard = document.createElement("div");
         playerCard.classList.add("card");

@@ -7,9 +7,12 @@ package com.fifa.fcms;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
@@ -60,10 +63,25 @@ public class Player extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        if (request.getParameter("action") == null) {
-            processPost(request, response);
+        HttpSession session = request.getSession();
+        Cookie cookies[] = request.getCookies();
+        boolean valid = false;
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName() == "username") {
+                    valid = true;
+                }
+            }
+
+        }
+        if (session.getAttribute("username") != null || valid) {
+            if (request.getParameter("action") == null) {
+                processPost(request, response);
+            } else {
+                processDelete(request, response);
+            }
         } else {
-            processDelete(request, response);
+            response.sendRedirect("/pages/login");
         }
 
     }
@@ -86,6 +104,7 @@ public class Player extends HttpServlet {
 
     protected void processDelete(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
+
         int playerId = Integer.parseInt(request.getParameter("playerId"));
         boolean success = Utils.deletePlayer(playerId);
 
@@ -96,6 +115,7 @@ public class Player extends HttpServlet {
             String redirectUrl = "/pages/player?playerId=" + playerId;
             response.sendRedirect(redirectUrl);
         }
+
     }
 
     /**

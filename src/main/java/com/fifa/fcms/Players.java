@@ -7,9 +7,12 @@ package com.fifa.fcms;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
@@ -59,23 +62,38 @@ public class Players extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String fname = request.getParameter("fname");
-        String lname = request.getParameter("lname");
-        long dateOfBirth = Long.parseLong(request.getParameter("dateOfBirth"));
-        String nationality = request.getParameter("nationality");
-        String position = request.getParameter("position");
-        float salary = Float.parseFloat(request.getParameter("salary"));
-        int clubId = Integer.parseInt(request.getParameter("clubId"));
-        int jerseyNo = Integer.parseInt(request.getParameter("jerseyNo"));
-        long contractEndDate = Long.parseLong(request.getParameter("contractEndDate"));
+        HttpSession session = request.getSession();
+        Cookie cookies[] = request.getCookies();
+        boolean valid = false;
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName() == "username") {
+                    valid = true;
+                }
+            }
 
-        boolean success = Utils.registerPlayer(fname, lname, dateOfBirth, nationality, position, salary, clubId,
-                jerseyNo, contractEndDate);
-        if (success) {
-            response.sendRedirect("/pages/club?clubId=" + clubId);
+        }
+        if (session.getAttribute("username") != null || valid) {
+            String fname = request.getParameter("fname");
+            String lname = request.getParameter("lname");
+            long dateOfBirth = Long.parseLong(request.getParameter("dateOfBirth"));
+            String nationality = request.getParameter("nationality");
+            String position = request.getParameter("position");
+            float salary = Float.parseFloat(request.getParameter("salary"));
+            int clubId = Integer.parseInt(request.getParameter("clubId"));
+            int jerseyNo = Integer.parseInt(request.getParameter("jerseyNo"));
+            long contractEndDate = Long.parseLong(request.getParameter("contractEndDate"));
+
+            boolean success = Utils.registerPlayer(fname, lname, dateOfBirth, nationality, position, salary, clubId,
+                    jerseyNo, contractEndDate);
+            if (success) {
+                response.sendRedirect("/pages/club?clubId=" + clubId);
+            } else {
+                response.sendRedirect("/pages/players");
+
+            }
         } else {
-            response.sendRedirect("/pages/players");
-
+            response.sendRedirect("/pages/login");
         }
     }
 

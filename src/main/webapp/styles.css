@@ -26,7 +26,9 @@ h1 {
   font-size: 3rem;
   text-align: center;
 }
-
+#black-header {
+  color: #0f0e0e;
+}
 nav {
     display: flex;
     -webkit-backdrop-filter: blur(10px);
@@ -70,22 +72,22 @@ nav {
   color: white;
 }
 
-.login-form-container {
+.form-container {
     color: white;
+    background-color: #0f0e0e7c;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: center;
     align-items: center;
-    width: 30vw;
-    height: 30vh;
-    position: absolute;
+    gap: 10px;
+    
+    /* position: absolute;
     top: 0;
     left: 0;
-    margin: auto auto;
-    border: 2px solid rgba(255, 255, 255, 0.178);
     right: 0;
-    bottom: 0;
-    justify-content: center;
+    bottom: 0; */
+    margin: 10px auto;
+    border: 2px solid rgba(255, 255, 255, 0.178);
     border-radius: 1rem;
     padding: 2.5rem;
     text-align: center;
@@ -93,12 +95,48 @@ nav {
     backdrop-filter: blur(10px);
 }
 
-.login-form-container form {
+.form-container form {
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
     margin-bottom: 30px;
+}
+.form-container label {
+  display: flex;
+  align-items: center;
+}
+.form-container span, .form-container input, .form-container select {
+  font-family: Quicksand;
+}
+
+.login-form-container {
+    width: 30vw;
+    height: 30vh;
+}
+.register-form-container {
+  gap: 10px;
+  padding: 20px;
+  width: 40vw;
+  height: max-content;
+}
+.register-form-container h1 {
+  padding: 10px;
+}
+.register-form-container form {
+  gap: 10px;
+}
+.register-form-container form label span{
+  width: 150px;
+  text-align: left;
+}
+.transfer-form-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .submit-btn {
@@ -120,79 +158,34 @@ form label {
 }
 
 form input {
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 5px;
     border-top: none;
     border-left: none;
     width: 20vw;
     height: 20px;
 }
-/* body {
-    background-color: #ababac;
-    box-sizing: border-box;
-    padding: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+form select {
+  padding: 1px 2px;
+  margin: 0 5px;
 }
-nav {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-.navlist {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin: 0;
-    gap: 10px;
-    list-style-type: none;
-}
-.navlink {
-    text-decoration: none;
-    text-align: center;
-    padding: 10px 20px;
-    background-color: white;
-    border-radius: 10px;
-    color:black ;
-    /* height: 20px; */
-/* } */
- */
+
 .heading {
     text-align: center;
 }
-/* .login-form-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    width: 20vw;
-    height: 20vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: auto auto;
-    right: 0;
-    bottom: 0;
-    background-color: white;
-    justify-content: center;
-    border-radius: 1rem;
-    padding: 2.5rem;
-    text-align: center;
-}
 
-.login-form-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    margin-bottom: 30px;
+.card-header {
+  background-color: rgba(148, 209, 190, 0.229);
+  backdrop-filter: blur(10px);
 }
-.submit-btn {
-    width: 100px;
-} */
 .card-header .btn-link{
   font-family: 'Francois One';
   font-size: 1.2rem;
 
+}
+.players {
+  width: 90%;
+  margin: 0 auto;
 }
 .player-card .card-body {
     display: flex;
@@ -210,17 +203,24 @@ nav {
   text-align: left;
   
 }
-
+.player-card-header {
+  background-color:#0f0e0e;
+  color: white;
+  backdrop-filter: blur(10px);
+}
 .player-card-header .card-body span {
     font-size: 1.1rem;
     font-family: Quicksand, Helvetica;
     font-weight: bold;
 }
 .card-body span, .card-body a{
-  font-family: Quicksand;
-  font-size: 0.9rem;
+  font-family: Helvetica;
+  font-size: 1rem;
 }
 
+.card-body a {
+  color: #2977f4;
+}
 
 .club-card .card-body {
     display: flex;
@@ -229,7 +229,6 @@ nav {
 .club-card .card-body span {
     width: 30%;
     font-size: 1rem;
-    /* text-align: left; */
 }
 .club-card .card-body a {
     width: 30%;
@@ -243,11 +242,18 @@ nav {
     display: flex;
     justify-content: space-around;
     width: 60%;
-    
 }
+
 .club-stats span {
     text-align: center;
 }
+
+.club-card-header {
+  background-color: #0f0e0e;
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
 .club-card-header .card-body span {
     font-size: 1.1rem;
     font-family: Quicksand, Helvetica;
@@ -270,10 +276,7 @@ nav {
     align-items: center;
 }
 .stats {
-  position: relative;
-  left: 40px;
-  right: 10px;
-
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -304,8 +307,8 @@ nav {
 .stats a {
   font-family: Quicksand;
   color: #335968ff;
-
 }
+
 .buttons {
   position: relative;
   left: 40px;

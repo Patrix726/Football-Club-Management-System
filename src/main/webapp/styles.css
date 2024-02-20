@@ -80,12 +80,6 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    
-    /* position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; */
     margin: 10px auto;
     border: 2px solid rgba(255, 255, 255, 0.178);
     border-radius: 1rem;
@@ -111,8 +105,14 @@ nav {
 }
 
 .login-form-container {
-    width: 30vw;
-    height: 30vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30vw;
+  height: 30vh;
 }
 .register-form-container {
   gap: 10px;
@@ -125,6 +125,7 @@ nav {
 }
 .register-form-container form {
   gap: 10px;
+  margin-bottom: 10px;
 }
 .register-form-container form label span{
   width: 150px;
